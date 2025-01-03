@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    // Plugin definitions
+}
+
+include ':app'
+
+// Load properties after the plugins block
+def properties = new Properties()
+file("local.properties").withInputStream {
+    properties.load(it)
+}
+
+
+
